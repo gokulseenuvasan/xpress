@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xpress Dent – Advanced Dental Center</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root { --brand: #f54900; --brand-dark: #c93b00; --dark: #0d0d0d; --mid: #1a1a1a; --grey: #f5f5f5; --text: #333; --muted: #777; }
+  body { font-family: "Inter Display", "Inter", sans-serif; color: var(--text); overflow-x: hidden; }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @keyframes countUp { from { opacity:0; transform:scale(0.8); } to { opacity:1; transform:scale(1); } }
+  @keyframes pulse { 0%,100% { transform:scale(1); } 50% { transform:scale(1.05); } }
+  @keyframes slideRight { from { transform:translateX(-100%); opacity:0; } to { transform:translateX(0); opacity:1; } }
+</style>
+</head>
+<body>
+
+<!-- ===== GLOBAL HEADER ===== -->
+<header style="background:var(--dark,#0d0d0d);padding:20px 40px;position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,0.05);">
+  <div style="max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;">
+    <a href="index.html" style="color:#fff;font-size:24px;font-weight:900;text-decoration:none;letter-spacing:-1px;font-family:'Inter Display',sans-serif;">
+      Xpress<span style="color:var(--brand,#f54900);">Dent</span>
+    </a>
+    <nav style="display:flex;gap:32px;align-items:center;font-family:'Inter Display',sans-serif;">
+      <a href="index.html" style="color:#fff;text-decoration:none;font-size:15px;font-weight:600;transition:color 0.3s;" onmouseover="this.style.color='var(--brand,#f54900)'" onmouseout="this.style.color='#fff'">Home</a>
+      <a href="about.html" style="color:#fff;text-decoration:none;font-size:15px;font-weight:600;transition:color 0.3s;" onmouseover="this.style.color='var(--brand,#f54900)'" onmouseout="this.style.color='#fff'">About Us</a>
+      <div style="position:relative;display:inline-block;" onmouseover="document.getElementById('services-dropdown').style.display='block'" onmouseout="document.getElementById('services-dropdown').style.display='none'">
+        <a href="#" style="color:#fff;text-decoration:none;font-size:15px;font-weight:600;display:flex;align-items:center;gap:4px;">Services <span style="font-size:10px;">▼</span></a>
+        <div id="services-dropdown" style="display:none;position:absolute;top:100%;left:0;background:#1a1a1a;min-width:220px;border-radius:12px;padding:12px 0;box-shadow:0 10px 30px rgba(0,0,0,0.2);margin-top:10px;">
+          <a href="dental-implants.html" style="display:block;padding:10px 24px;color:#fff;text-decoration:none;font-size:14px;font-weight:500;transition:background 0.3s;" onmouseover="this.style.background='rgba(245,73,0,0.1)';this.style.color='var(--brand,#f54900)'" onmouseout="this.style.background='transparent';this.style.color='#fff'">Dental Implants</a>
+          <a href="smile-design.html" style="display:block;padding:10px 24px;color:#fff;text-decoration:none;font-size:14px;font-weight:500;transition:background 0.3s;" onmouseover="this.style.background='rgba(245,73,0,0.1)';this.style.color='var(--brand,#f54900)'" onmouseout="this.style.background='transparent';this.style.color='#fff'">Smile Design</a>
+          <a href="pedodontics-whitening.html" style="display:block;padding:10px 24px;color:#fff;text-decoration:none;font-size:14px;font-weight:500;transition:background 0.3s;" onmouseover="this.style.background='rgba(245,73,0,0.1)';this.style.color='var(--brand,#f54900)'" onmouseout="this.style.background='transparent';this.style.color='#fff'">Pedodontics &amp; Whitening</a>
+        </div>
+      </div>
+      <a href="contact.html" style="color:#fff;text-decoration:none;font-size:15px;font-weight:600;transition:color 0.3s;" onmouseover="this.style.color='var(--brand,#f54900)'" onmouseout="this.style.color='#fff'">Contact</a>
+      <a href="tel:+919445594466" style="background:var(--brand,#f54900);color:#fff;padding:10px 24px;border-radius:50px;font-size:14px;font-weight:700;text-decoration:none;transition:background 0.3s;" onmouseover="this.style.background='var(--brand-dark,#c93b00)'" onmouseout="this.style.background='var(--brand,#f54900)'">Call Now</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== SECTION 1: HERO ===== -->
+<section style="position:relative; min-height:90vh; background:var(--dark); overflow:hidden; display:flex; align-items:center;">
+  <!-- BG Pattern -->
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 70% 50%, rgba(245,73,0,0.18) 0%, transparent 70%), radial-gradient(ellipse 50% 80% at 10% 80%, rgba(245,73,0,0.08) 0%, transparent 60%);"></div>
+  <!-- Grid overlay -->
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px);background-size:60px 60px;"></div>
+
+  <!-- Floating badge -->
+  <div style="position:absolute;top:40px;right:40px;background:var(--brand);color:#fff;padding:10px 22px;border-radius:50px;font-size:13px;font-weight:700;letter-spacing:0.5px;animation:pulse 3s infinite;z-index:2;">
+    🟢 Open 365 Days
+  </div>
+
+  <div style="max-width:1200px;margin:0 auto;padding:80px 40px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;z-index:1;position:relative;width:100%;">
+    <!-- Left -->
+    <div style="animation:fadeUp 0.8s ease both;">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(245,73,0,0.12);border:1px solid rgba(245,73,0,0.3);padding:8px 18px;border-radius:50px;margin-bottom:28px;">
+        <span style="color:var(--brand);font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;">Advanced Dental Center</span>
+      </div>
+      <h1 style="font-size:clamp(38px,5vw,68px);font-weight:900;color:#fff;line-height:1.05;letter-spacing:-2px;margin-bottom:24px;">
+        Your Smile,<br><span style="color:var(--brand);">Our Priority.</span><br>Open 365 Days.
+      </h1>
+      <p style="font-size:17px;line-height:1.7;color:rgba(255,255,255,0.6);margin-bottom:40px;max-width:480px;">Fast, painless, and high-precision dental treatments using cutting-edge digital technology — with zero waiting time.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="#" style="background:var(--brand);color:#fff;padding:16px 36px;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;">
+          Book Appointment →
+        </a>
+        <a href="tel:+919445594466" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;padding:16px 36px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+          📞 Call Us
+        </a>
+      </div>
+    </div>
+    <!-- Right: Visual Card -->
+    <div style="animation:fadeUp 0.8s 0.2s ease both;position:relative;">
+      <div style="background:linear-gradient(135deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.1);border-radius:24px;padding:40px;backdrop-filter:blur(20px);">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+          <div style="background:rgba(245,73,0,0.1);border:1px solid rgba(245,73,0,0.2);border-radius:16px;padding:28px;text-align:center;">
+            <div style="font-size:42px;font-weight:900;color:var(--brand);letter-spacing:-2px;">30L+</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:6px;font-weight:500;">Happy Patients</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:28px;text-align:center;">
+            <div style="font-size:42px;font-weight:900;color:#fff;letter-spacing:-2px;">100+</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:6px;font-weight:500;">Expert Dentists</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:28px;text-align:center;">
+            <div style="font-size:42px;font-weight:900;color:#fff;letter-spacing:-2px;">55K+</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:6px;font-weight:500;">Implants Done</div>
+          </div>
+          <div style="background:rgba(245,73,0,0.1);border:1px solid rgba(245,73,0,0.2);border-radius:16px;padding:28px;text-align:center;">
+            <div style="font-size:42px;font-weight:900;color:var(--brand);letter-spacing:-2px;">10+</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:6px;font-weight:500;">Clinics</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: STATS BAR ===== -->
+<section style="background:#fff;border-bottom:1px solid #f0f0f0;padding:0;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:repeat(5,1fr);text-align:center;">
+    <div style="padding:32px 20px;border-right:1px solid #f0f0f0;">
+      <div style="font-size:34px;font-weight:900;color:var(--brand);letter-spacing:-1px;">30L+</div>
+      <div style="font-size:13px;color:var(--muted);margin-top:4px;font-weight:500;">Happy Patients</div>
+    </div>
+    <div style="padding:32px 20px;border-right:1px solid #f0f0f0;">
+      <div style="font-size:34px;font-weight:900;color:var(--dark);letter-spacing:-1px;">100+</div>
+      <div style="font-size:13px;color:var(--muted);margin-top:4px;font-weight:500;">Dentists</div>
+    </div>
+    <div style="padding:32px 20px;border-right:1px solid #f0f0f0;">
+      <div style="font-size:34px;font-weight:900;color:var(--dark);letter-spacing:-1px;">10+</div>
+      <div style="font-size:13px;color:var(--muted);margin-top:4px;font-weight:500;">Clinics</div>
+    </div>
+    <div style="padding:32px 20px;border-right:1px solid #f0f0f0;">
+      <div style="font-size:34px;font-weight:900;color:var(--brand);letter-spacing:-1px;">365</div>
+      <div style="font-size:13px;color:var(--muted);margin-top:4px;font-weight:500;">Days Open</div>
+    </div>
+    <div style="padding:32px 20px;">
+      <div style="font-size:34px;font-weight:900;color:var(--dark);letter-spacing:-1px;">55K+</div>
+      <div style="font-size:13px;color:var(--muted);margin-top:4px;font-weight:500;">Implants</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 2b: WHY US ===== -->
+<section style="background:#fafafa;padding:80px 40px;">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+    <div>
+      <div style="display:inline-block;background:rgba(245,73,0,0.08);color:var(--brand);padding:6px 16px;border-radius:50px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px;">Why Choose Us</div>
+      <h2 style="font-size:clamp(28px,3.5vw,48px);font-weight:900;color:var(--dark);line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px;">Comprehensive Dental Care <span style="color:var(--brand);">Under One Roof</span></h2>
+      <p style="font-size:16px;line-height:1.8;color:var(--muted);margin-bottom:36px;">We deliver fast, painless and high-precision dental treatments using cutting-edge digital technology. Our team of specialist doctors ensures you receive the best possible dental experience with zero waiting time.</p>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:44px;height:44px;background:var(--brand);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">⚡</div>
+          <div>
+            <div style="font-size:15px;font-weight:700;color:var(--dark);">Zero Waiting Time</div>
+            <div style="font-size:13px;color:var(--muted);">Walk in, get treated. No long queues.</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:44px;height:44px;background:var(--brand);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">🦷</div>
+          <div>
+            <div style="font-size:15px;font-weight:700;color:var(--dark);">Digital Precision Technology</div>
+            <div style="font-size:13px;color:var(--muted);">Latest equipment for accurate, painless care.</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:44px;height:44px;background:var(--brand);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;">👨‍⚕️</div>
+          <div>
+            <div style="font-size:15px;font-weight:700;color:var(--dark);">Specialist Doctors</div>
+            <div style="font-size:13px;color:var(--muted);">Expert team across all dental specialities.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="position:relative;">
+      <!-- Decorative card -->
+      <div style="background:var(--dark);border-radius:24px;padding:50px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(245,73,0,0.3),transparent 70%);"></div>
+        <div style="font-size:80px;margin-bottom:20px;">🦷</div>
+        <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:12px;">Advanced Dental Center</div>
+        <div style="font-size:14px;color:rgba(255,255,255,0.5);line-height:1.7;margin-bottom:28px;">Dentistry powered by technology. Premium care accessible to everyone across Chennai.</div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <span style="background:rgba(245,73,0,0.15);border:1px solid rgba(245,73,0,0.3);color:var(--brand);padding:6px 14px;border-radius:50px;font-size:12px;font-weight:600;">Painless</span>
+          <span style="background:rgba(245,73,0,0.15);border:1px solid rgba(245,73,0,0.3);color:var(--brand);padding:6px 14px;border-radius:50px;font-size:12px;font-weight:600;">Affordable</span>
+          <span style="background:rgba(245,73,0,0.15);border:1px solid rgba(245,73,0,0.3);color:var(--brand);padding:6px 14px;border-radius:50px;font-size:12px;font-weight:600;">Digital</span>
+          <span style="background:rgba(245,73,0,0.15);border:1px solid rgba(245,73,0,0.3);color:var(--brand);padding:6px 14px;border-radius:50px;font-size:12px;font-weight:600;">365 Days</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: IMAGE SLIDER ===== -->
+<section style="padding:80px 40px;background:#fff;overflow:hidden;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:50px;">
+      <div style="display:inline-block;background:rgba(245,73,0,0.08);color:var(--brand);padding:6px 16px;border-radius:50px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;">Our Clinic</div>
+      <h2 style="font-size:clamp(28px,3.5vw,44px);font-weight:900;color:var(--dark);letter-spacing:-1.5px;">State-of-the-Art <span style="color:var(--brand);">Facilities</span></h2>
+    </div>
+    <!-- Slider Container -->
+    <div style="position:relative;">
+      <div style="overflow:hidden;border-radius:20px;">
+        <div id="slider" style="display:flex;transition:transform 0.5s ease;">
+          <!-- Slide 1 -->
+          <div class="slide" style="min-width:100%;flex:0 0 100%;display:flex;gap:24px;">
+            <div style="flex:1;background:linear-gradient(135deg,#1a1a2e,#16213e);border-radius:20px;padding:60px 40px;display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:380px;">
+              <div style="font-size:80px;margin-bottom:20px;">🏥</div>
+              <h3 style="font-size:24px;font-weight:800;color:#fff;margin-bottom:10px;text-align:center;">Modern Treatment Rooms</h3>
+              <p style="font-size:14px;color:rgba(255,255,255,0.5);text-align:center;max-width:280px;">Sterile, air-conditioned rooms equipped with latest dental chairs and instruments.</p>
+            </div>
+            <div style="flex:1;background:linear-gradient(135deg,var(--brand),#ff7040);border-radius:20px;padding:60px 40px;display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:380px;">
+              <div style="font-size:80px;margin-bottom:20px;">💻</div>
+              <h3 style="font-size:24px;font-weight:800;color:#fff;margin-bottom:10px;text-align:center;">Digital X-Ray & Scanning</h3>
+              <p style="font-size:14px;color:rgba(255,255,255,0.7);text-align:center;max-width:280px;">High-resolution digital imaging for precise diagnosis and treatment planning.</p>
+            </div>
+            <div style="flex:1;background:linear-gradient(135deg,#0f3460,#533483);border-radius:20px;padding:60px 40px;display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:380px;">
+              <div style="font-size:80px;margin-bottom:20px;">✨</div>
+              <h3 style="font-size:24px;font-weight:800;color:#fff;margin-bottom:10px;text-align:center;">Sterilisation Lab</h3>
+              <p style="font-size:14px;color:rgba(255,255,255,0.5);text-align:center;max-width:280px;">International-standard sterilisation protocols ensuring 100% hygiene and safety.</p>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="slide" style="min-width:100%;flex:0 0 100%;display:flex;gap:24px;">
+            <div style="flex:1;background:linear-gradient(135deg,#16213e,#1a1a2e);border-radius:20px;padding:60px 40px;display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:380px;">
+              <div style="font-size:80px;margin-bottom:20px;">💬</div>
+              <h3 style="font-size:24px;font-weight:800;color:#fff;margin-bottom:10px;text-align:center;">Consultation Area</h3>
+              <p style="font-size:14px;color:rgba(255,255,255,0.5);text-align:center;max-width:280px;">Comfortable space for you to discuss your dental concerns with our specialists.</p>
+            </div>
+            <div style="flex:1;background:linear-gradient(135deg,#ff7040,var(--brand));border-radius:20px;padding:60px 40px;display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:380px;">
+              <div style="font-size:80px;margin-bottom:20px;">🛋️</div>
+              <h3 style="font-size:24px;font-weight:800;color:#fff;margin-bottom:10px;text-align:center;">Waiting Lounge</h3>
+              <p style="font-size:14px;color:rgba(255,255,255,0.7);text-align:center;max-width:280px;">Relaxing environment with amenities to make you feel at home.</p>
+            </div>
+            <div style="flex:1;background:linear-gradient(135deg,#533483,#0f3460);border-radius:20px;padding:60px 40px;display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:380px;">
+              <div style="font-size:80px;margin-bottom:20px;">📋</div>
+              <h3 style="font-size:24px;font-weight:800;color:#fff;margin-bottom:10px;text-align:center;">Reception Desk</h3>
+              <p style="font-size:14px;color:rgba(255,255,255,0.5);text-align:center;max-width:280px;">Friendly staff ready to assist you with appointments and billing.</p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="slide" style="min-width:100%;flex:0 0 100%;display:flex;gap:24px;">
+            <div style="flex:1;background:linear-gradient(135deg,#1a1a2e,#0f3460);border-radius:20px;padding:60px 40px;display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:380px;">
+              <div style="font-size:80px;margin-bottom:20px;">🔩</div>
+              <h3 style="font-size:24px;font-weight:800;color:#fff;margin-bottom:10px;text-align:center;">Implant Suite</h3>
+              <p style="font-size:14px;color:rgba(255,255,255,0.5);text-align:center;max-width:280px;">Dedicated sterile surgical area for advanced implantology procedures.</p>
+            </div>
+            <div style="flex:1;background:linear-gradient(135deg,var(--brand),#c2185b);border-radius:20px;padding:60px 40px;display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:380px;">
+              <div style="font-size:80px;margin-bottom:20px;">🪥</div>
+              <h3 style="font-size:24px;font-weight:800;color:#fff;margin-bottom:10px;text-align:center;">Orthodontic Bay</h3>
+              <p style="font-size:14px;color:rgba(255,255,255,0.7);text-align:center;max-width:280px;">Specialised open-bay setup for braces and aligner treatments.</p>
+            </div>
+            <div style="flex:1;background:linear-gradient(135deg,#00695c,#533483);border-radius:20px;padding:60px 40px;display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:380px;">
+              <div style="font-size:80px;margin-bottom:20px;">🧸</div>
+              <h3 style="font-size:24px;font-weight:800;color:#fff;margin-bottom:10px;text-align:center;">Paediatric Room</h3>
+              <p style="font-size:14px;color:rgba(255,255,255,0.5);text-align:center;max-width:280px;">Child-friendly environment designed to reduce dental anxiety.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Dots -->
+      <div style="display:flex;justify-content:center;gap:8px;margin-top:28px;align-items:center;">
+        <button onclick="currentSlide=0;showSlide()" id="dot0" style="width:32px;height:8px;background:var(--brand);border:none;border-radius:4px;cursor:pointer;transition:all 0.3s;"></button>
+        <button onclick="currentSlide=1;showSlide()" id="dot1" style="width:8px;height:8px;background:#ddd;border:none;border-radius:4px;cursor:pointer;transition:all 0.3s;"></button>
+        <button onclick="currentSlide=2;showSlide()" id="dot2" style="width:8px;height:8px;background:#ddd;border:none;border-radius:4px;cursor:pointer;transition:all 0.3s;"></button>
+      </div>
+      <!-- Arrows -->
+      <button onclick="prevSlide()" style="position:absolute;top:50%;left:-20px;transform:translateY(-50%);width:48px;height:48px;background:#fff;border:1px solid #e0e0e0;border-radius:50%;cursor:pointer;font-size:18px;box-shadow:0 4px 12px rgba(0,0,0,0.1);z-index:2;">‹</button>
+      <button onclick="nextSlide()" style="position:absolute;top:50%;right:-20px;transform:translateY(-50%);width:48px;height:48px;background:var(--brand);color:#fff;border:none;border-radius:50%;cursor:pointer;font-size:18px;box-shadow:0 4px 12px rgba(245,73,0,0.3);z-index:2;">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: SERVICES ===== -->
+<section style="padding:80px 40px;background:var(--grey);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:50px;flex-wrap:gap;">
+      <div>
+        <div style="display:inline-block;background:rgba(245,73,0,0.08);color:var(--brand);padding:6px 16px;border-radius:50px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;">Our Quick Services</div>
+        <h2 style="font-size:clamp(28px,3.5vw,44px);font-weight:900;color:var(--dark);letter-spacing:-1.5px;">Advanced Treatments<br>for Every <span style="color:var(--brand);">Smile</span></h2>
+      </div>
+      <a href="services.html" style="background:var(--dark);color:#fff;padding:14px 28px;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap;transition:background 0.3s;">View All Services →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+      <!-- Dental Implants -->
+      <a href="dental-implants.html" style="background:#fff;border-radius:20px;overflow:hidden;text-decoration:none;display:block;box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 32px rgba(245,73,0,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+        <div style="background:linear-gradient(135deg,var(--brand),#ff7040);height:180px;display:flex;align-items:center;justify-content:center;font-size:64px;">🦷</div>
+        <div style="padding:24px;">
+          <h3 style="font-size:18px;font-weight:800;color:var(--dark);margin-bottom:8px;">Dental Implants</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">Permanent, natural-looking tooth replacement with titanium implants.</p>
+          <div style="margin-top:16px;color:var(--brand);font-size:13px;font-weight:700;">Learn More →</div>
+        </div>
+      </a>
+      <!-- Smile Design -->
+      <a href="smile-design.html" style="background:#fff;border-radius:20px;overflow:hidden;text-decoration:none;display:block;box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 32px rgba(245,73,0,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+        <div style="background:linear-gradient(135deg,#1a1a2e,#0f3460);height:180px;display:flex;align-items:center;justify-content:center;font-size:64px;">😁</div>
+        <div style="padding:24px;">
+          <h3 style="font-size:18px;font-weight:800;color:var(--dark);margin-bottom:8px;">Smile Design</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">Complete smile makeover with veneers, bonding and digital smile planning.</p>
+          <div style="margin-top:16px;color:var(--brand);font-size:13px;font-weight:700;">Learn More →</div>
+        </div>
+      </a>
+      <!-- Teeth Whitening -->
+      <a href="pedodontics-whitening.html" style="background:#fff;border-radius:20px;overflow:hidden;text-decoration:none;display:block;box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 32px rgba(245,73,0,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+        <div style="background:linear-gradient(135deg,#533483,#c2185b);height:180px;display:flex;align-items:center;justify-content:center;font-size:64px;">✨</div>
+        <div style="padding:24px;">
+          <h3 style="font-size:18px;font-weight:800;color:var(--dark);margin-bottom:8px;">Teeth Whitening</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">Professional laser whitening for a bright, confident smile in one session.</p>
+          <div style="margin-top:16px;color:var(--brand);font-size:13px;font-weight:700;">Learn More →</div>
+        </div>
+      </a>
+      <!-- Pedodontics -->
+      <a href="pedodontics-whitening.html" style="background:#fff;border-radius:20px;overflow:hidden;text-decoration:none;display:block;box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 12px 32px rgba(245,73,0,0.15)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 12px rgba(0,0,0,0.06)'">
+        <div style="background:linear-gradient(135deg,#00695c,#00838f);height:180px;display:flex;align-items:center;justify-content:center;font-size:64px;">👧</div>
+        <div style="padding:24px;">
+          <h3 style="font-size:18px;font-weight:800;color:var(--dark);margin-bottom:8px;">Pedodontics</h3>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;">Gentle, child-friendly dental care for healthy teeth from a young age.</p>
+          <div style="margin-top:16px;color:var(--brand);font-size:13px;font-weight:700;">Learn More →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 5: TESTIMONIALS ===== -->
+<section style="padding:80px 40px;background:var(--dark);overflow:hidden;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:50px;">
+      <div style="display:inline-block;background:rgba(245,73,0,0.15);color:var(--brand);padding:6px 16px;border-radius:50px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;">Patient Reviews</div>
+      <h2 style="font-size:clamp(28px,3.5vw,44px);font-weight:900;color:#fff;letter-spacing:-1.5px;">What Our Patients Say</h2>
+    </div>
+    <!-- Reviews slider -->
+    <div style="position:relative;">
+      <div id="reviewSlider" style="display:flex;gap:24px;transition:transform 0.5s ease;">
+        <!-- Review 1 -->
+        <div style="min-width:calc(33.333% - 16px);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:32px;">
+          <div style="color:#f59e0b;font-size:18px;margin-bottom:16px;">★★★★★</div>
+          <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:24px;font-style:italic;">"I had severe tooth pain and the team at Xpress Dent handled it so professionally. The treatment was quick, painless, and affordable. Highly recommended!"</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:44px;height:44px;background:var(--brand);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;">R</div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:#fff;">Ramesh Kumar</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.4);">IT Professional</div>
+            </div>
+          </div>
+        </div>
+        <!-- Review 2 -->
+        <div style="min-width:calc(33.333% - 16px);background:rgba(245,73,0,0.08);border:1px solid rgba(245,73,0,0.2);border-radius:20px;padding:32px;">
+          <div style="color:#f59e0b;font-size:18px;margin-bottom:16px;">★★★★★</div>
+          <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:24px;font-style:italic;">"Best dental experience I've ever had. The digital scanning was so precise and the doctor explained everything clearly. My implant looks and feels natural!"</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:44px;height:44px;background:var(--brand);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;">P</div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:#fff;">Priya Suresh</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.4);">Business Owner</div>
+            </div>
+          </div>
+        </div>
+        <!-- Review 3 -->
+        <div style="min-width:calc(33.333% - 16px);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:32px;">
+          <div style="color:#f59e0b;font-size:18px;margin-bottom:16px;">★★★★★</div>
+          <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:24px;font-style:italic;">"My kids love coming here. The staff is so gentle and patient. The clinic near Tambaram is super convenient. Open on Sundays too — amazing!"</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:44px;height:44px;background:var(--brand);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;">A</div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:#fff;">Anitha Raj</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.4);">Homemaker</div>
+            </div>
+          </div>
+        </div>
+        <!-- Review 4 (Duplicate) -->
+        <div style="min-width:calc(33.333% - 16px);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:32px;">
+          <div style="color:#f59e0b;font-size:18px;margin-bottom:16px;">★★★★★</div>
+          <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:24px;font-style:italic;">"I had severe tooth pain and the team at Xpress Dent handled it so professionally. The treatment was quick, painless, and affordable. Highly recommended!"</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:44px;height:44px;background:var(--brand);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;">R</div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:#fff;">Ramesh Kumar</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.4);">IT Professional</div>
+            </div>
+          </div>
+        </div>
+        <!-- Review 5 (Duplicate) -->
+        <div style="min-width:calc(33.333% - 16px);background:rgba(245,73,0,0.08);border:1px solid rgba(245,73,0,0.2);border-radius:20px;padding:32px;">
+          <div style="color:#f59e0b;font-size:18px;margin-bottom:16px;">★★★★★</div>
+          <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:24px;font-style:italic;">"Best dental experience I've ever had. The digital scanning was so precise and the doctor explained everything clearly. My implant looks and feels natural!"</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:44px;height:44px;background:var(--brand);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;">P</div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:#fff;">Priya Suresh</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.4);">Business Owner</div>
+            </div>
+          </div>
+        </div>
+        <!-- Review 6 (Duplicate) -->
+        <div style="min-width:calc(33.333% - 16px);background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:32px;">
+          <div style="color:#f59e0b;font-size:18px;margin-bottom:16px;">★★★★★</div>
+          <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:24px;font-style:italic;">"My kids love coming here. The staff is so gentle and patient. The clinic near Tambaram is super convenient. Open on Sundays too — amazing!"</p>
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:44px;height:44px;background:var(--brand);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;">A</div>
+            <div>
+              <div style="font-size:14px;font-weight:700;color:#fff;">Anitha Raj</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.4);">Homemaker</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Nav buttons -->
+      <div style="display:flex;justify-content:center;gap:12px;margin-top:32px;">
+        <button onclick="prevReview()" style="width:48px;height:48px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);color:#fff;border-radius:50%;cursor:pointer;font-size:20px;">‹</button>
+        <button onclick="nextReview()" style="width:48px;height:48px;background:var(--brand);border:none;color:#fff;border-radius:50%;cursor:pointer;font-size:20px;">›</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 6: FAQ ===== -->
+<section style="padding:80px 40px;background:#fff;">
+  <div style="max-width:800px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:50px;">
+      <div style="display:inline-block;background:rgba(245,73,0,0.08);color:var(--brand);padding:6px 16px;border-radius:50px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;">FAQ</div>
+      <h2 style="font-size:clamp(28px,3.5vw,44px);font-weight:900;color:var(--dark);letter-spacing:-1.5px;">Frequently Asked <span style="color:var(--brand);">Questions</span></h2>
+    </div>
+    <div id="faq" style="display:flex;flex-direction:column;gap:12px;">
+    </div>
+    <!-- CTA -->
+    <div style="margin-top:50px;text-align:center;background:linear-gradient(135deg,var(--dark),#1a1a2e);border-radius:24px;padding:48px 40px;">
+      <div style="font-size:40px;margin-bottom:16px;">💬</div>
+      <h3 style="font-size:24px;font-weight:800;color:#fff;margin-bottom:12px;">Need More Help?</h3>
+      <p style="font-size:15px;color:rgba(255,255,255,0.5);margin-bottom:28px;">Just say hi on WhatsApp, and we'll help you with your questions.</p>
+      <a href="https://wa.me/919445594466" target="_blank" style="background:#25d366;color:#fff;padding:16px 36px;border-radius:8px;font-size:15px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Send Message on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 7: CLINICS ===== -->
+<section style="padding:80px 40px;background:var(--grey);">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:50px;">
+      <div style="display:inline-block;background:rgba(245,73,0,0.08);color:var(--brand);padding:6px 16px;border-radius:50px;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:16px;">Our Locations</div>
+      <h2 style="font-size:clamp(28px,3.5vw,44px);font-weight:900;color:var(--dark);letter-spacing:-1.5px;">Find a Clinic <span style="color:var(--brand);">Near You</span> Across Chennai</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px;">
+      <!-- Tambaram -->
+      <div style="background:#fff;border-radius:20px;padding:32px;border:1px solid #ebebeb;transition:box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(245,73,0,0.12)'" onmouseout="this.style.boxShadow='none'">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
+          <div>
+            <div style="display:inline-block;background:var(--brand);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px;margin-bottom:10px;">01</div>
+            <h3 style="font-size:20px;font-weight:800;color:var(--dark);">Tambaram</h3>
+          </div>
+          <span style="background:#e8f5e9;color:#2e7d32;padding:4px 10px;border-radius:50px;font-size:11px;font-weight:700;">Open 365 Days</span>
+        </div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:8px;">📍 17A, MK Reddy St West Tambaram, Tambaram, Chennai, Tamil Nadu 600045</p>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:4px;">🏛️ Near Tambaram Main Bus Stand</p>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:20px;">🕐 10:00 am – 9:00 pm</p>
+        <a href="https://maps.google.com" target="_blank" style="background:var(--brand);color:#fff;padding:10px 20px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">📍 Find Directions</a>
+      </div>
+      <!-- Urapakkam -->
+      <div style="background:#fff;border-radius:20px;padding:32px;border:1px solid #ebebeb;transition:box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(245,73,0,0.12)'" onmouseout="this.style.boxShadow='none'">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
+          <div>
+            <div style="display:inline-block;background:var(--dark);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px;margin-bottom:10px;">02</div>
+            <h3 style="font-size:20px;font-weight:800;color:var(--dark);">Urapakkam</h3>
+          </div>
+          <span style="background:#e8f5e9;color:#2e7d32;padding:4px 10px;border-radius:50px;font-size:11px;font-weight:700;">Open 365 Days</span>
+        </div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:8px;">📍 345, 2, GST Rd Ambika Nagar, Urapakkam, Vandalur R.F., Tamil Nadu 603210</p>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:4px;">🏛️ Near Kilambakam Bus Stand</p>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:20px;">🕐 10:00 am – 9:00 pm</p>
+        <a href="https://maps.google.com" target="_blank" style="background:var(--brand);color:#fff;padding:10px 20px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">📍 Find Directions</a>
+      </div>
+      <!-- Guduvancheri -->
+      <div style="background:#fff;border-radius:20px;padding:32px;border:1px solid #ebebeb;transition:box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(245,73,0,0.12)'" onmouseout="this.style.boxShadow='none'">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
+          <div>
+            <div style="display:inline-block;background:var(--brand);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px;margin-bottom:10px;">03</div>
+            <h3 style="font-size:20px;font-weight:800;color:var(--dark);">Guduvancheri</h3>
+          </div>
+          <span style="background:#e8f5e9;color:#2e7d32;padding:4px 10px;border-radius:50px;font-size:11px;font-weight:700;">Open 365 Days</span>
+        </div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:8px;">📍 6, GST Rd Nandhivaram, Guduvancheri, Tamil Nadu 603202</p>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:4px;">🏛️ Near Guduvancheri Bus Stand</p>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:20px;">🕐 10:00 am – 9:00 pm</p>
+        <a href="https://maps.google.com" target="_blank" style="background:var(--brand);color:#fff;padding:10px 20px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">📍 Find Directions</a>
+      </div>
+      <!-- Singaperumal Koil -->
+      <div style="background:#fff;border-radius:20px;padding:32px;border:1px solid #ebebeb;transition:box-shadow 0.3s;" onmouseover="this.style.boxShadow='0 8px 32px rgba(245,73,0,0.12)'" onmouseout="this.style.boxShadow='none'">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
+          <div>
+            <div style="display:inline-block;background:var(--dark);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:4px;margin-bottom:10px;">04</div>
+            <h3 style="font-size:20px;font-weight:800;color:var(--dark);">Singaperumal Koil</h3>
+          </div>
+          <span style="background:#e8f5e9;color:#2e7d32;padding:4px 10px;border-radius:50px;font-size:11px;font-weight:700;">Open 365 Days</span>
+        </div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:8px;">📍 1/164, GST Rd, Singaperumal Koil, Chennai, Tamil Nadu 603204</p>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:4px;">🏛️ Near SP Koil Railway Station</p>
+        <p style="font-size:12px;color:var(--muted);margin-bottom:20px;">🕐 10:00 am – 9:00 pm</p>
+        <a href="https://maps.google.com" target="_blank" style="background:var(--brand);color:#fff;padding:10px 20px;border-radius:6px;font-size:13px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">📍 Find Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// ---- Clinic Image Slider ----
+let currentSlide = 0;
+function showSlide(){
+  const slider = document.getElementById('slider');
+  slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+  const dots = [document.getElementById('dot0'),document.getElementById('dot1'),document.getElementById('dot2')];
+  dots.forEach((d,i)=>{ d.style.width = i===currentSlide?'32px':'8px'; d.style.background = i===currentSlide?'#f54900':'#ddd'; });
+}
+function nextSlide(){ currentSlide=(currentSlide+1)%3; showSlide(); }
+function prevSlide(){ currentSlide=(currentSlide+2)%3; showSlide(); }
+
+// ---- Review Slider ----
+let reviewPos = 0;
+function nextReview(){
+  const slider = document.getElementById('reviewSlider');
+  const itemsVisible = window.innerWidth <= 768 ? 1 : 3;
+  const maxPos = Math.max(0, slider.children.length - itemsVisible);
+  reviewPos = reviewPos >= maxPos ? 0 : reviewPos + 1;
+  slider.style.transform = `translateX(calc(-${reviewPos * (100 / itemsVisible)}% - ${reviewPos * 24}px))`;
+}
+function prevReview(){
+  const slider = document.getElementById('reviewSlider');
+  const itemsVisible = window.innerWidth <= 768 ? 1 : 3;
+  const maxPos = Math.max(0, slider.children.length - itemsVisible);
+  reviewPos = reviewPos <= 0 ? maxPos : reviewPos - 1;
+  slider.style.transform = `translateX(calc(-${reviewPos * (100 / itemsVisible)}% - ${reviewPos * 24}px))`;
+}
+
+// ---- FAQ ----
+const faqs = [
+  ["Is the treatment painful?","No! We use the latest anaesthesia techniques and digital tools to ensure a completely painless experience for all our patients."],
+  ["Are you open on Sundays and public holidays?","Yes! We are open 365 days a year, including Sundays and all public holidays, from 10:00 am to 9:00 pm."],
+  ["How much does a dental implant cost?","The cost of a dental implant varies depending on your case. Book a free consultation at any of our clinics for a personalised quote."],
+  ["How long does a teeth whitening session take?","A professional laser whitening session at Xpress Dent typically takes 45–60 minutes, and results are visible immediately."],
+  ["Do you treat children?","Absolutely! Our Pedodontics specialists are trained to handle children with care and patience, making the experience fun and comfortable."],
+  ["Is there free parking at your clinics?","Most of our clinic locations have convenient parking nearby. Contact the specific clinic for parking details."],
+  ["How do I book an appointment?","You can call us at +91 94455 94466, message us on WhatsApp, or walk into any of our clinics directly."],
+  ["Do you accept dental insurance?","Yes, we work with several insurance providers. Please bring your insurance card during your visit and our team will assist you."],
+  ["What is Smile Design?","Smile Design is a complete smile makeover using digital planning, veneers, bonding, and other cosmetic procedures to give you your dream smile."],
+  ["How often should I visit the dentist?","We recommend a dental check-up and cleaning every 6 months to maintain good oral health and catch any issues early."]
+];
+const faqContainer = document.getElementById('faq');
+faqs.forEach(([q,a],i)=>{
+  const item = document.createElement('div');
+  item.style.cssText='background:#f9f9f9;border:1px solid #ebebeb;border-radius:12px;overflow:hidden;';
+  item.innerHTML=`
+    <button onclick="toggleFaq(${i})" id="faqBtn${i}" style="width:100%;text-align:left;padding:20px 24px;background:transparent;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit;">
+      <span style="font-size:15px;font-weight:700;color:#0d0d0d;">${q}</span>
+      <span id="faqIcon${i}" style="font-size:20px;color:#f54900;transition:transform 0.3s;">+</span>
+    </button>
+    <div id="faqAns${i}" style="display:none;padding:0 24px 20px;font-size:14px;color:#777;line-height:1.7;">${a}</div>
+  `;
+  faqContainer.appendChild(item);
+});
+function toggleFaq(i){
+  const ans=document.getElementById(`faqAns${i}`);
+  const icon=document.getElementById(`faqIcon${i}`);
+  const open=ans.style.display==='block';
+  // Close all
+  faqs.forEach((_,j)=>{ document.getElementById(`faqAns${j}`).style.display='none'; document.getElementById(`faqIcon${j}`).textContent='+'; document.getElementById(`faqIcon${j}`).style.transform=''; });
+  if(!open){ ans.style.display='block'; icon.textContent='−'; }
+}
+// Auto slide
+setInterval(nextSlide, 4000);
+setInterval(nextReview, 3000);
+</script>
+<!-- ===== GLOBAL FOOTER ===== -->
+<footer style="background:var(--dark,#0d0d0d);padding:80px 40px 40px;color:rgba(255,255,255,0.7);border-top:1px solid rgba(255,255,255,0.05);font-family:'Inter Display',sans-serif;">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:60px;margin-bottom:60px;">
+    <div style="grid-column: span 2;">
+      <a href="index.html" style="color:#fff;font-size:28px;font-weight:900;text-decoration:none;letter-spacing:-1px;display:inline-block;margin-bottom:20px;">
+        Xpress<span style="color:var(--brand,#f54900);">Dent</span>
+      </a>
+      <p style="font-size:15px;line-height:1.8;margin-bottom:24px;color:rgba(255,255,255,0.6);max-width:300px;">Advanced Dental Center delivering fast, painless, and high-precision dental treatments across Chennai.</p>
+    </div>
+    <div>
+      <h4 style="color:#fff;font-size:18px;font-weight:700;margin-bottom:24px;">Quick Links</h4>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <a href="index.html" style="color:rgba(255,255,255,0.6);text-decoration:none;font-size:15px;transition:color 0.3s;" onmouseover="this.style.color='var(--brand,#f54900)'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Home</a>
+        <a href="about.html" style="color:rgba(255,255,255,0.6);text-decoration:none;font-size:15px;transition:color 0.3s;" onmouseover="this.style.color='var(--brand,#f54900)'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">About Us</a>
+        <a href="dental-implants.html" style="color:rgba(255,255,255,0.6);text-decoration:none;font-size:15px;transition:color 0.3s;" onmouseover="this.style.color='var(--brand,#f54900)'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Services</a>
+        <a href="contact.html" style="color:rgba(255,255,255,0.6);text-decoration:none;font-size:15px;transition:color 0.3s;" onmouseover="this.style.color='var(--brand,#f54900)'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Contact</a>
+      </div>
+    </div>
+    <div>
+      <h4 style="color:#fff;font-size:18px;font-weight:700;margin-bottom:24px;">Services</h4>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <a href="dental-implants.html" style="color:rgba(255,255,255,0.6);text-decoration:none;font-size:15px;transition:color 0.3s;" onmouseover="this.style.color='var(--brand,#f54900)'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Dental Implants</a>
+        <a href="smile-design.html" style="color:rgba(255,255,255,0.6);text-decoration:none;font-size:15px;transition:color 0.3s;" onmouseover="this.style.color='var(--brand,#f54900)'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Smile Design</a>
+        <a href="pedodontics-whitening.html" style="color:rgba(255,255,255,0.6);text-decoration:none;font-size:15px;transition:color 0.3s;" onmouseover="this.style.color='var(--brand,#f54900)'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Pedodontics</a>
+      </div>
+    </div>
+    <div>
+      <h4 style="color:#fff;font-size:18px;font-weight:700;margin-bottom:24px;">Contact Us</h4>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;gap:12px;align-items:flex-start;">
+          <span style="font-size:18px;">📍</span>
+          <span style="font-size:15px;line-height:1.6;color:rgba(255,255,255,0.6);">Multiple locations across Chennai</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center;">
+          <span style="font-size:18px;">📞</span>
+          <a href="tel:+919445594466" style="font-size:15px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--brand,#f54900)'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">+91 94455 94466</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1200px;margin:0 auto;border-top:1px solid rgba(255,255,255,0.05);padding-top:30px;display:flex;justify-content:space-between;align-items:center;font-size:14px;color:rgba(255,255,255,0.4);">
+    <p>&copy; 2026 Xpress Dent. All rights reserved.</p>
+  </div>
+</footer>
+</body>
+</html>
